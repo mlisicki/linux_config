@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/export/mlrg/mlisicki/src/neural_combinatorial_optimization/annotated-transformer-master'
+let g:netrw_dirhist_2='/export/mlrg/mlisicki/src/neural_combinatorial_optimization'
+let g:netrw_dirhist_3='/export/mlrg/mlisicki/src/neural_combinatorial_optimization/attention-learn-to-route'
+let g:netrw_dirhist_4='/export/mlrg/mlisicki/src/neural_combinatorial_optimization/attention-learn-to-route/attnroute'
+let g:netrw_dirhist_5='/export/mlrg/mlisicki/src/neural_combinatorial_optimization'
+let g:netrw_dirhist_6='/export/mlrg/mlisicki/src/neural_combinatorial_optimization/attention-learn-to-route'
+let g:netrw_dirhist_7='/export/mlrg/mlisicki/src/neural_combinatorial_optimization/attention-learn-to-route/attnroute'

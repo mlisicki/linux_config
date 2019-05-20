@@ -1,0 +1,65 @@
+# compozed by teh 5tinger
+autodetach on
+startup_message off
+defscrollback 10000
+altscreen on # clear screen after closing some programs
+defflow auto
+shell -bash
+defutf8 on
+vbell off
+
+shelltitle '$ |bash'
+
+# backticks to display information in the statusbar
+# backtick 1 0 0 /usr/local/bin/screen-mem-usage
+# backtick 2 0 0 /usr/local/bin/screen-cpu-usage
+
+# colors
+#term screen-256color
+terminfo rxvt-unicode 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# statusbar
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= G}[%{g}host:%{G}%H]%{g}[%= %{= w}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{c}%m-%d~%{C}%c:%s%{g}]'
+
+# warning of activity
+activity '%c activity -> %n%f %t'
+
+# left + right arrow key meta key mods
+#bindkey '^[Od' prev  # change window with ctrl-left
+#bindkey '^[Oc' next  # change window with ctrl-right
+
+bind j focus down
+bind k focus up
+bind l focus right
+bind h focus left
+bind t focus top
+bind b focus bottom
+
+bindkey "^[[D" eval "resize -h -5"
+bindkey "^[[B" eval "resize -v -5"
+bindkey "^[[A" eval "resize -v +5"
+bindkey "^[[C" eval "resize -h +5"
+
+bindkey ^f at "#" kill # ctrl+f kill all windows
+
+# use hjkl keys to resize regions
+#bind -c rsz h eval "resize -h -5" "command -c rsz"
+#bind -c rsz j eval "resize -v -5" "command -c rsz"
+#bind -c rsz k eval "resize -v +5" "command -c rsz"
+#bind -c rsz l eval "resize -h +5" "command -c rsz"
+
+# layout
+layout new one
+split
+screen
+focus down
+resize 20%
+screen
+split -v
+focus right
+resize 30%
+screen -t ipython
+focus up
+
+layout autosave on

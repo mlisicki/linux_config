@@ -1,0 +1,8 @@
+$include /etc/inputrc
+
+$if Bash
+    "\C-j": menu-complete
+    # bash >= 4 only
+    # "\C-k": menu-complete-backward
+    "\C-k": "\e-1\C-j"
+$endif
